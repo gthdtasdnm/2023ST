@@ -1,3 +1,5 @@
+package A1;
+
 public class Statistics {
     public static int countOnes(String s) {
         int count = 0;

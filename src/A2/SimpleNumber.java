@@ -1,3 +1,5 @@
+package A2;
+
 public class SimpleNumber extends MagicNumber {
     public int j;
 

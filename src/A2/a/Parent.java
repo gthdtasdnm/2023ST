@@ -1,4 +1,4 @@
-package a;
+package A2.a;
 
 public class Parent {
     private int a;
