@@ -1,6 +1,6 @@
 # 📚 Altklausur 2023ST – Bücher & Kategorien mit Visitor
 
-Dieses Projekt enthält eine vollständige Umsetzung der Aufgaben aus der **Altklausur 2023ST** (Objektorientierte Programmierung, UniBw München). Es wird eine Baumstruktur zur Verwaltung von Büchern und Kategorien modelliert – inklusive PrettyPrinter und Factory-Methode.
+Dieses Projekt enthält eine vollständige Umsetzung der Aufgaben aus der **Altklausur 2023ST** (Objektorientierte Programmierung). Es wird eine Baumstruktur zur Verwaltung von Büchern und Kategorien modelliert – inklusive PrettyPrinter und Factory-Methode.
 
 ## 📁 Projektstruktur
 
