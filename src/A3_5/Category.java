@@ -5,9 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Category implements Component, Iterable<Component>{
-    private String name;
-    private Component components;
-    private List<Component> categorys = new ArrayList<>();
+    private final String name;
+    private final List<Component> categories = new ArrayList<>();
 
     public Category(String name){
         this.name = name;
@@ -18,11 +17,11 @@ public class Category implements Component, Iterable<Component>{
     }
 
     public void add(Component c){
-        categorys.add(c);
+        categories.add(c);
     }
 
     public Iterator<Component> iterator(){
-        return categorys.iterator();
+        return categories.iterator();
     }
 
     @Override

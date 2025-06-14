@@ -4,7 +4,7 @@ public class Book implements Component{
     private String author;
     private String title;
 
-    Book(String author, String title){
+    public Book(String author, String title){
         if(author == "" || title == ""){
             throw new IllegalArgumentException("");
         }

@@ -1,0 +1,86 @@
+@startuml
+class A3_5.Book {
+- String author
+- String title
++ <<Create>> Book(String,String)
++ String getAuthor()
++ String getTitle()
++ String toString()
++ void accept(Visitor)
+}
+
+interface A3_5.Visitor {
++ void visit(Book)
++ void visit(Category)
+}
+
+interface A3_5.Component {
++ void accept(Visitor)
+}
+
+class A3_5.PrettyPrinter {
+- Indentor indent
++ <<Create>> PrettyPrinter(Indentor)
++ void visit(Book)
++ void visit(Category)
+}
+
+
+class A3_5.Category {
+- String name
+- List<Component> categories
++ <<Create>> Category(String)
++ String getName()
++ void add(Component)
++ Iterator<Component> iterator()
++ String toString()
++ void accept(Visitor)
+}
+
+
+class A3_5.ComponentFactory {
++ Book createBook(String,String)
++ Category createCategory(String,Component)
+}
+
+class A3_5.Indentor {
+- String tab
+- int increment
++ <<Create>> Indentor(String)
++ <<Create>> Indentor()
++ void increment()
++ void decrement()
++ String toString()
+}
+
+
+
+
+A3_5.Component <|.. A3_5.Book
+A3_5.Visitor <|.. A3_5.PrettyPrinter
+A3_5.Component <|.. A3_5.Category
+A3_5.Iterable <|.. A3_5.Category
+
+
+' ------------------- Beziehungen -------------------
+
+' Komposition: Category besitzt dauerhaft Komponenten
+A3_5.Category "1" *-- "*" A3_5.Component : components
+
+' Aggregation: PrettyPrinter nutzt Indentor, aber besitzt ihn nicht dauerhaft
+A3_5.PrettyPrinter o-- A3_5.Indentor : indent
+
+' Assoziation: PrettyPrinter ruft Methoden von Book und Category auf
+A3_5.PrettyPrinter --> A3_5.Book
+A3_5.PrettyPrinter --> A3_5.Category
+
+' Assoziation: ComponentFactory erstellt Book und Category
+A3_5.ComponentFactory --> A3_5.Book
+A3_5.ComponentFactory --> A3_5.Category
+
+
+' Visitor Pattern
+A3_5.Book --> A3_5.Visitor : accept(visitor)
+A3_5.Category --> A3_5.Visitor : accept(visitor)
+
+@enduml
