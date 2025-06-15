@@ -18,6 +18,12 @@ Der relevante Code liegt im Verzeichnis `src/`:
     - `BookTest` – Prüft Konstruktorvalidierung und `toString()`.
     - `ComponentFactoryTest` – Testet die Factory-Methoden.
     - `PrettyPrinterTest` – Vergleicht die formattierte Konsolenausgabe mit der erwarteten Struktur.
+## ⚠️ Wichtig
+
+guckt euch das UML Diagram im Package A3-5 an.
+- gestrichelt = Vererbung
+- Schwarzer Pfeil = Assoiationen
+- Rest = Aggregation und Komposition
 
 ## ✅ Hinweise zur Bearbeitung
 
